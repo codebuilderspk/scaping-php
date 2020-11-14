@@ -27,7 +27,6 @@ while (($line = fgetcsv($file)) !== FALSE) {
     foreach($html->find('.mark-list__link') as $keyword){
         $keywords[] = $keyword->plaintext; 
         fputcsv_eol($fp,$keywords,PHP_EOL);
-        $keywords = [];
     }
     
     // Clean up memory
